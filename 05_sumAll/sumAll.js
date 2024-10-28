@@ -4,9 +4,12 @@ const sumAll = function(startNum, endNum) {
         return "ERROR";
     }
 
+    const smallNum = Math.min(startNum, endNum);
+    const bigNum = Math.max(startNum, endNum);
+
     // Find the sum
     let sum = 0;
-    for (let i = startNum; i <= endNum; i++) {
+    for (let i = smallNum; i <= bigNum; i++) {
         sum += i;
     }
     return sum;
