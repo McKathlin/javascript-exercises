@@ -7,12 +7,9 @@ const sumAll = function(startNum, endNum) {
     const smallNum = Math.min(startNum, endNum);
     const bigNum = Math.max(startNum, endNum);
 
-    // Find the sum
-    let sum = 0;
-    for (let i = smallNum; i <= bigNum; i++) {
-        sum += i;
-    }
-    return sum;
+    // Find the sum (Gauss shortcut)
+    const diff = bigNum - smallNum;
+    return (smallNum + (diff / 2)) * (diff + 1);
 };
 
 const isWholeNumber = function(n) {
