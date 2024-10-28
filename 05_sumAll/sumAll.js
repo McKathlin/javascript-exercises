@@ -8,8 +8,8 @@ const sumAll = function(startNum, endNum) {
     const bigNum = Math.max(startNum, endNum);
 
     // Find the sum (Gauss shortcut)
-    const diff = bigNum - smallNum;
-    return (smallNum + (diff / 2)) * (diff + 1);
+    const seriesLength = 1 + bigNum - smallNum;
+    return (seriesLength / 2) * (smallNum + bigNum);
 };
 
 const isWholeNumber = function(n) {
